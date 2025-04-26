@@ -17,10 +17,10 @@ public class ApplicationConfig {
     ModelMapper getModelMapper(){
         return new ModelMapper();
     }
-    //    @Bean
-//    JavaMailSender getjavaMailSender(){
-//        return new JavaMailSenderImpl();
-//    }
+        @Bean
+    JavaMailSender getjavaMailSender(){
+        return new JavaMailSenderImpl();
+    }
     @Bean
     PasswordEncoder getPasswordEncoder() {
         return new PasswordEncoder() {
@@ -42,7 +42,7 @@ public class ApplicationConfig {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/computer_shop");
         dataSource.setUsername("root");
-        dataSource.setPassword("12345");
+        dataSource.setPassword("1234");
         return dataSource;
     }
 
